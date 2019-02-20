@@ -25,7 +25,7 @@ Nous souhaitons avoir les fonctionnalités suivantes sur l'application :
 * Visualiser la liste des dépôts publics auxquels il contribue -- **Terminé**
 * Afﬁcher les statistiques de ses contributions par dépôt -- **Terminé**
 * Pour chaque dépôt auquel il contribue visualiser les langages utilisés -- **Terminé**
-* Pour chaque dépôt auquel il contribue sa position dans le top 10 des contributeurs de ce dépôt
+* Pour chaque dépôt auquel il contribue sa position dans le top 10 des contributeurs de ce dépôt **Terminé**
 * Connaitre le top 3 des langages qu'il utilise le plus fréquemment -- **Terminé**
 * Nous souhaitons pouvoir conserver nos recherches pour y revenir ultérieurement -- **Terminé**
 * Déploiement du projet rails sur HEROKU ou AWS ou tout autre plateforme en ligne
