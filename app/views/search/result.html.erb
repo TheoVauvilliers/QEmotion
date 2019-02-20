@@ -30,7 +30,7 @@
         Languages used : <% @languagesForEachRepo[i].each do |key, value| %>  <%= key %> <% end %> <br>
 
         <% if @userInfo["type"] != "Organization" %>
-          Number of commit : <%= @numberOfContributionsForEachRepo[i] %> which corresponds to <%= @percentageOfContributionsForEachRepo[i] %>% <br>
+          Number of commit : <%= @numberOfContributionsForEachRepo[i] %><br>
           His rank in top 10 of contributors to this repo : <% @topContributorsForEachRepo[i].each do |key, value| %>
             <% if key == @userInfo["login"] && y <= 9 %>
               <%= y+1 %>

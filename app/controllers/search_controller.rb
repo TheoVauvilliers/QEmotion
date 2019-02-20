@@ -43,8 +43,6 @@ class SearchController < ApplicationController
 
                     jsonOfContributorsForEachRepo = getJsonOfContributorsForEachRepo(listOfRepos)
                     @numberOfContributionsForEachRepo = getNumberOfContributionsForEachRepo(jsonOfContributorsForEachRepo, @userInfo["login"])
-                    totalContributionForEachRepo = getTotalContributionForEachRepo(jsonOfContributorsForEachRepo)
-                    @percentageOfContributionsForEachRepo = getPercentageOfContributionsForEachRepo(@numberOfContributionsForEachRepo, totalContributionForEachRepo)
 
                     numberOfContributionsForEachRepoByUser = getNumberOfContributionsForEachRepoByUser(jsonOfContributorsForEachRepo)
                     @topContributorsForEachRepo =  sortContributorsByDESC(numberOfContributionsForEachRepoByUser)
@@ -157,37 +155,6 @@ class SearchController < ApplicationController
         end
 
         return numberOfContributionsForEachRepo
-    end
-
-    # Permets de comptabiliser tous les contributeurs de chaque repos
-    def getTotalContributionForEachRepo(jsonOfContributorsForEachRepo)
-        totalContributionForEachRepo = []
-        i = 0
-
-        jsonOfContributorsForEachRepo.each do |jsonOfContributorsForOneRepo|
-            jsonOfContributorsForOneRepo.each do |user|
-                if totalContributionForEachRepo[i] == nil
-                    totalContributionForEachRepo[i] = 0
-                end
-                totalContributionForEachRepo[i] += user["contributions"]
-            end
-            i += 1
-        end
-
-        return totalContributionForEachRepo
-    end
-
-    # Récupère le pourcentage de contributions de l'utilisateur par repo
-    def getPercentageOfContributionsForEachRepo(numberOfContributionsForEachRepo, totalContributionForEachRepo)
-        percentageOfContributionsForEachRepo = []
-        i = 0
-
-        totalContributionForEachRepo.each do |numberOfContributions|
-            percentageOfContributionsForEachRepo[i] = ((numberOfContributionsForEachRepo[i].to_i)/numberOfContributions.to_i) * 100
-            i += 1
-        end
-
-        return percentageOfContributionsForEachRepo
     end
 
     #
