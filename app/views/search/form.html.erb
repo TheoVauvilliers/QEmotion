@@ -1,0 +1,51 @@
+<div class="text-center">
+  <h1 class="title">Find a GitHub user</h1>
+
+  <% if logged_in? %>
+    <hr>
+
+    <p>
+      <h2>The last 10 searches</h2>
+
+      <br>
+
+      <% if !@lastSearch.empty? %>
+        <% @lastSearch.each do |values| %>
+          <a class="search" onclick="send('<%= values.name %>')"><%= values.name %></a> <br>
+        <% end %>
+      <% else %>
+        No search carried out (thought to connect)
+      <% end %>
+    </p>
+
+  <% end %>
+</div>
+
+<hr>
+
+<%= form_tag '/search' do %>
+
+  <div class="form-group">
+    <%= label_tag(:username, "User searched on GitHub :") %>
+    <%= text_field_tag :username, "", placeholder: 'Eg : TheoVauvilliers', class: 'form-control', id: 'username' %>
+  </div>
+
+  <div class="form-group">
+    <%= submit_tag "Search", class: 'btn btn-warning', id: 'search' %>
+  </div>
+
+  <style>
+    .search:hover {
+      background-color: aqua;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function send(name) {
+        $("#username").val(name);
+        $("#search").click();
+      }
+  </script>
+
+<% end %>

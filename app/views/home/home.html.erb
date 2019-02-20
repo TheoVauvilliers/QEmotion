@@ -1,0 +1,17 @@
+<div>
+  <h1 class="text-center title">Welcome<% if logged_in? %><span style="color: #E6A917"> <%= current_user.name %></span><% end %>, here you can search any user on GitHub !</h1>
+
+  <% if !logged_in? %>
+    <hr>
+
+    <p class="text-center">
+      If you want to keep a search history, you must create an account or login <br>
+    </p>
+  <% end %>
+
+  <hr>
+
+  <p class="text-center">
+    <a class="btn btn-warning" href="/search">Do research</a>
+  </p>
+</div>

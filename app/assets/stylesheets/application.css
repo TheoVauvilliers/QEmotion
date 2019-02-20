@@ -1,0 +1,116 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/**
+ * Global config CSS
+ */
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f3f1f4;
+}
+
+/**
+ * Menu CSS
+ */
+
+body nav {
+    background-color: #E6A917;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 1px solid #fff;
+}
+
+.name {
+    margin-left: 490px;
+}
+
+nav ul li a {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-left: 10px;
+    text-align: center;
+}
+
+nav ul li:hover {
+    border-bottom: 2px solid #fff;
+    padding: 10px 0px 8px 0px;
+}
+
+nav ul li {
+    padding: 10px 0px 10px 0px;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:focus{
+    color: white;
+}
+
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    background-color: #40527F;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    padding: 0px;
+    margin: 0px;
+}
+
+@media screen and (max-width: 992px) {
+    .name {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1199px) {
+    .name {
+        margin-left: 120px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1377px) {
+    .name {
+        margin-left: 120px;
+    }
+}
+
+@media screen and (min-width: 1378px) and (max-width: 1599px) {
+    .name {
+        margin-left: 240px;
+    }
+}
+.intoBody {
+    margin-top: 70px;
+}
+
+.title {
+    font-family: 'Quicksand', sans-serif;
+    color : #323A62;
+
+    padding: 50px 0 50px 0;
+}
