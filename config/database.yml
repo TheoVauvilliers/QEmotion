@@ -54,4 +54,6 @@ test:
 #
 production:
   <<: *default
+  database: qemotion_prod
+  username: qemotion
   url: <%= ENV['DATABASE_URL'] %>
