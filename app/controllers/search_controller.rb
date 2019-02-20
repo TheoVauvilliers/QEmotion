@@ -150,7 +150,7 @@ class SearchController < ApplicationController
         jsonOfContributorsForEachRepo.each do |jsonOfContributorsForOneRepo|
             jsonOfContributorsForOneRepo.each do |user|
                 if user["login"] == loginOfUser
-                    numberOfContributionsForEachRepo[i] = user["contributions"].round(0)
+                    numberOfContributionsForEachRepo[i] = user["contributions"]
                     i += 1
                 end
             end
@@ -169,7 +169,7 @@ class SearchController < ApplicationController
                 if totalContributionForEachRepo[i] == nil
                     totalContributionForEachRepo[i] = 0
                 end
-                totalContributionForEachRepo[i] += user["contributions"].round(0)
+                totalContributionForEachRepo[i] += user["contributions"]
             end
             i += 1
         end
