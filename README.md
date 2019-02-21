@@ -19,6 +19,8 @@ Penser à changer activer la gem nécessaire dans le gemfile et de mettre l'autr
 
 Penser aussi à activer le bon fichier database.yml (nomDuProjet/config). Pour l'activer, retirer le DEV. ou le PROD. devant le nom du fichier database.yml
 
+Le projet sera par défaut en dev avec la gem mysql2 d'activée
+
 ------
 
 ## But du projet :

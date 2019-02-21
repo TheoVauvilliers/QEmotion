@@ -2,73 +2,57 @@
 
 <hr>
 
-<% if !@error %>
-  <div>
-    <h2>Information about the person sought:</h2>
+<div>
+  <h2>Information about the person sought:</h2>
+  <p>
+    His login : <%= @userInfo["login"] %> <br>
+    His id : <%= @userInfo["id"] %> <br>
+    His name : <%= @userInfo["name"] %> <br>
+    Access to his GitHub : <a href="<%= @userInfo["html_url"] %>" target="_blank"><%= @userInfo["name"] %></a> <br>
+    Number of public repositories : <%= @userInfo["public_repos"] %>
+  </p>
+</div>
 
-    <p>
-      His login : <%= @userInfo["login"] %> <br>
-      His id : <%= @userInfo["id"] %> <br>
-      His name : <%= @userInfo["name"] %> <br>
-      Access to his GitHub : <a href="<%= @userInfo["html_url"] %>" target="_blank"><%= @userInfo["name"] %></a> <br>
-      Number of public repositories : <%= @userInfo["public_repos"] %>
-    </p>
+<hr>
 
-  </div>
-
-  <hr>
-
-  <div>
-    <h2>Deposit Information :</h2>
-
-    <p>
-      <% i = 0
-         y = 0
-         @namesOfAllRepos.each do |nameOfOneRepo| %>
-
-        <%= i+1 %>. <%= nameOfOneRepo %> <br>
-        Languages used : <% @languagesForEachRepo[i].each do |key, value| %>  <%= key %> <% end %> <br>
-
-        <% if @userInfo["type"] != "Organization" %>
-          Number of commit : <%= @numberOfContributionsForEachRepo[i] %><br>
-          His rank in top 10 of contributors to this repo : <% @topContributorsForEachRepo[i].each do |key, value| %>
-            <% if key == @userInfo["login"] && y <= 9 %>
-              <%= y+1 %>
-            <% elsif key == @userInfo["login"] %>
-              Not in top 10
-            <% end
-               y += 1 %>
-          <% end %>
+<div>
+  <h2>Deposit Information :</h2>
+  <p>
+    <% i = 0
+       y = 0
+       @namesOfAllRepos.each do |nameOfOneRepo| %>
+      <%= i+1 %>. <%= nameOfOneRepo %> <br>
+      Languages used : <% @languagesForEachRepo[i].each do |key, value| %>  <%= key %> <% end %> <br>
+      <% if @userInfo["type"] != "Organization" %>
+        Number of commit : <%= @numberOfContributionsForEachRepo[i] %><br>
+        His rank in top 10 of contributors to this repo : <% @topContributorsForEachRepo[i].each do |key, value| %>
+          <% if key == @userInfo["login"] && y <= 9 %>
+            <%= y+1 %>
+          <% elsif key == @userInfo["login"] %>
+            Not in top 10
+          <% end
+             y += 1 %>
         <% end %>
-        <br><br>
+      <% end %>
+      <br><br>
+    <% i += 1
+       y = 0
+       end %>
+  </p>
+</div>
 
-      <% i += 1
-         y = 0
-         end %>
+<hr>
 
-    </p>
-  </div>
-
-  <hr>
-
-  <div>
-    <h2>Top 3 languages :</h2>
-
-    <p>
-      <%  i = 0
-          while i <= 2 %>
-        <%= i+1 %>. <%= @topLanguagesOfAllRepos[i][0] %> <br>
-      <%  i += 1
-          end %>
-    </p>
-
-  </div>
-
-<% else %>
-
-  <p>Nobody has this username</p>
-
-<% end %>
+<div>
+  <h2>Top 3 languages :</h2>
+  <p>
+    <%  i = 0
+        while i <= 2 %>
+      <%= i+1 %>. <%= @topLanguagesOfAllRepos[i][0] %> <br>
+    <%  i += 1
+        end %>
+  </p>
+</div>
 
 <hr>
 

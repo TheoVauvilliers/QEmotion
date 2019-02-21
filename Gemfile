@@ -11,13 +11,11 @@ gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
 #
 # ACTIVE THIS GEM IF YOU ARE IN DEV !!
 #
-# gem 'mysql2', '>= 0.3.18', '< 0.6.0'
+gem 'mysql2', '>= 0.3.18', '< 0.6.0'
 #
 # ACTIVE THIS GEM IF YOU ARE IN DEV !!
 #
 # gem 'pg'
-
-
 
 
 # Use Puma as the app server

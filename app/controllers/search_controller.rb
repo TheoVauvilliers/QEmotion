@@ -69,10 +69,7 @@ class SearchController < ApplicationController
     def formatJSON(url)
         uri = URI(url)
         response = Net::HTTP.get(uri)
-        # response.use_ssl = true
-        # response.verify_mode = OpenSSL::SSL::VERIFY_NONE
         data = JSON.parse(response)
-        # http.verify_mode = OpenSSL::SSL::VERIFY_PEER
 
         return data
     end
