@@ -9,7 +9,7 @@
 * Rails : 5.1.6.1
 * GraphQL : 1.5.0
 
-### Librairie et gem utilisée :
+### Librairie et gem utilisées :
 * Utilisation de la gem bcrypt pour le cryptage des mots de passe.
 * Utilisation de la gem mysql2 pour le développement.
 * Utilisation de la gem pg pour la base de données en PostgreSQL sur le serveur de Heroku.
