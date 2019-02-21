@@ -15,7 +15,7 @@
 * Utilisation de la gem pg pour la base de données en PostgreSQL sur le serveur de Heroku.
 
 ### ATTENTION !!!!
-Penser à changer activer la gem nécessaire dans le gemfile et de mettre l'autre en commentaire !
+Penser à activer la gem nécessaire dans le gemfile et de mettre l'autre en commentaire !
 
 Penser aussi à activer le bon fichier database.yml (nomDuProjet/config). Pour l'activer, retirer le DEV. ou le PROD. devant le nom du fichier database.yml
 
