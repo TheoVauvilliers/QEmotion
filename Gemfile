@@ -8,9 +8,18 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
-# Use mysql as the database for Active Record
+#
+# ACTIVE THIS GEM IF YOU ARE IN DEV !!
+#
 # gem 'mysql2', '>= 0.3.18', '< 0.6.0'
-gem 'pg'
+#
+# ACTIVE THIS GEM IF YOU ARE IN DEV !!
+#
+# gem 'pg'
+
+
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

@@ -10,7 +10,14 @@
 * GraphQL : 1.5.0
 
 ### Librairie et gem utilisée :
-* Utilisation de la gem bcrypt pour le cryptage des mots de passe
+* Utilisation de la gem bcrypt pour le cryptage des mots de passe.
+* Utilisation de la gem mysql2 pour le développement.
+* Utilisation de la gem pg pour la base de données en PostgreSQL sur le serveur de Heroku.
+
+### ATTENTION !!!!
+Penser à changer activer la gem nécessaire dans le gemfile et de mettre l'autre en commentaire !
+
+Penser aussi à activer le bon fichier database.yml (nomDuProjet/config). Pour l'activer, retirer le DEV. ou le PROD. devant le nom du fichier database.yml
 
 ------
 
