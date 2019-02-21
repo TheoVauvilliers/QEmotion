@@ -15,7 +15,7 @@
 * Utilisation de la gem pg pour la base de données en PostgreSQL sur le serveur de Heroku.
 
 ### ATTENTION !!!!
-Penser à changer activer la gem nécessaire dans le gemfile et de mettre l'autre en commentaire !
+Penser à activer la gem nécessaire dans le gemfile et de mettre l'autre en commentaire !
 
 Penser aussi à activer le bon fichier database.yml (nomDuProjet/config). Pour l'activer, retirer le DEV. ou le PROD. devant le nom du fichier database.yml
 
@@ -37,7 +37,7 @@ Nous souhaitons avoir les fonctionnalités suivantes sur l'application :
 * Pour chaque dépôt auquel il contribue sa position dans le top 10 des contributeurs de ce dépôt **Terminé**
 * Connaitre le top 3 des langages qu'il utilise le plus fréquemment -- **Terminé**
 * Nous souhaitons pouvoir conserver nos recherches pour y revenir ultérieurement -- **Terminé**
-* Déploiement du projet rails sur HEROKU ou AWS ou tout autre plateforme en ligne
+* Déploiement du projet rails sur HEROKU ou AWS ou tout autre plateforme en ligne -- **Terminé** (adresse du site : https://vauvilliersqemotion.herokuapp.com/)
 
 ------
 
