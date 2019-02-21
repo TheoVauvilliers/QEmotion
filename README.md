@@ -17,7 +17,7 @@
 ### ATTENTION !!!!
 Penser à activer la gem nécessaire dans le gemfile et de mettre l'autre en commentaire !
 
-Penser aussi à activer le bon fichier database.yml (nomDuProjet/config). Pour l'activer, retirer le DEV. ou le PROD. devant le nom du fichier database.yml
+Le fichier database.yml pour la production est dans le repositorie sous le nom de DEV.database.yml (/config/DEV.database.yml)
 
 Le projet sera par défaut en dev avec la gem mysql2 d'activée
 
